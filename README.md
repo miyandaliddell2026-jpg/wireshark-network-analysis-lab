@@ -60,7 +60,7 @@ The DNS response packet was expanded in the details pane to reveal the Transacti
 
 The DNS Answers section in Wireshark was compared with the nslookup terminal output — both returned the same IP addresses for google.com, confirming the capture was successful.
 
-![Step 8](screenshots/step9.png)
+![Step 8](step9.png)
 
 ---
 
