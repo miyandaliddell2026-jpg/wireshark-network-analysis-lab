@@ -26,7 +26,7 @@ Command Prompt was opened with Administrator privileges to run nslookup and gene
 
 ### Step 4 — Run nslookup to Generate DNS Traffic
 
-The command `nslookup google.com` was run in Command Prompt, triggering a DNS query that Wireshark captured over the Wi-Fi interface.
+The command nslookup google.com was run in Command Prompt, triggering a DNS query that Wireshark captured over the Wi-Fi interface.
 
 ![Step 4](screenshots/step5.png)
 
@@ -34,7 +34,7 @@ The command `nslookup google.com` was run in Command Prompt, triggering a DNS qu
 
 ### Step 5 — Apply DNS Display Filter
 
-The display filter `dns` was applied in Wireshark to isolate DNS traffic. Packet 1221 shows the Standard DNS query for google.com.
+The display filter dns was applied in Wireshark to isolate DNS traffic. Packet 1221 shows the Standard DNS query for google.com.
 
 ![Step 5](screenshots/step6.png)
 
@@ -42,7 +42,7 @@ The display filter `dns` was applied in Wireshark to isolate DNS traffic. Packet
 
 ### Step 6 — Identify the DNS Response Packet
 
-Packet 1222 shows the DNS response from the server containing the resolved IP addresses for google.com, matching Transaction ID `0x0004`.
+Packet 1222 shows the DNS response from the server containing the resolved IP addresses for google.com, matching Transaction ID 0x0004.
 
 ![Step 6](screenshots/step7.png)
 
@@ -68,7 +68,7 @@ The DNS Answers section in Wireshark was compared with the nslookup terminal out
 
 ### Step 9 — Apply tcp.flags.syn == 1 Filter
 
-The display filter `tcp.flags.syn == 1` was applied to isolate TCP connection initiation packets, revealing the SYN and SYN-ACK packets of the three-way handshake.
+The display filter tcp.flags.syn == 1 was applied to isolate TCP connection initiation packets, revealing the SYN and SYN-ACK packets of the three-way handshake.
 
 ![Step 9](screenshots/step12.png)
 
@@ -86,7 +86,7 @@ The browser was navigated to zero.webappsecurity.com — an intentionally insecu
 
 ### Step 11 — View Plaintext Credentials in Packet Details
 
-The display filter `http.request.method == POST` was applied. The captured POST packet revealed the login credentials transmitted in complete plaintext — no decryption required.
+The display filter http.request.method == POST was applied. The captured POST packet revealed the login credentials transmitted in complete plaintext — no decryption required.
 
 ![Step 11](screenshots/step15.png)
 
@@ -96,7 +96,7 @@ The display filter `http.request.method == POST` was applied. The captured POST 
 
 ### Step 12 — Right-Click to Follow TCP Stream
 
-The HTTP POST packet was right-clicked and Follow → TCP Stream was selected to reconstruct the full HTTP conversation.
+The HTTP POST packet was right-clicked and Follow TCP Stream was selected to reconstruct the full HTTP conversation.
 
 ![Step 12](screenshots/step16.png)
 
@@ -118,9 +118,9 @@ Three capture files were saved from this lab session as portfolio evidence.
 
 | File | Size | Contents |
 |------|------|----------|
-| `dns-capture.pcapng` | ~43 KiB | DNS lookup exercise |
-| `http-post-capture.pcapng` | ~247 KiB | HTTP credential capture and TCP stream |
-| `tcp-handshake.pcapng` | ~53 KiB | TCP three-way handshake |
+| dns-capture.pcapng | ~43 KiB | DNS lookup exercise |
+| http-post-capture.pcapng | ~247 KiB | HTTP credential capture and TCP stream |
+| tcp-handshake.pcapng | ~53 KiB | TCP three-way handshake |
 
 ---
 
@@ -134,6 +134,3 @@ This lab demonstrated hands-on experience with:
 - Exposing plaintext credentials transmitted over unencrypted HTTP
 - Reconstructing full HTTP conversations using Follow TCP Stream
 - Saving packet captures in .pcapng format as portfolio evidence
-
----
-
