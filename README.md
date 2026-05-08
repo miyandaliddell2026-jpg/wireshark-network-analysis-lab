@@ -4,7 +4,7 @@
 
 Wireshark was launched and the Wi-Fi interface was selected to capture live network traffic.
 
-![Step 1](screenshots/step1.png)
+![Step 1](step1.png)
 
 ---
 
@@ -12,7 +12,7 @@ Wireshark was launched and the Wi-Fi interface was selected to capture live netw
 
 Wireshark began capturing packets in real time on the Wi-Fi interface, showing live TCP, UDP, and ARP traffic.
 
-![Step 2](screenshots/step2.png)
+![Step 2](step2.png)
 
 ---
 
@@ -20,7 +20,7 @@ Wireshark began capturing packets in real time on the Wi-Fi interface, showing l
 
 Command Prompt was opened with Administrator privileges to run nslookup and generate DNS traffic for Wireshark to capture.
 
-![Step 3](screenshots/step3.png)
+![Step 3](step3.png)
 
 ---
 
@@ -28,7 +28,7 @@ Command Prompt was opened with Administrator privileges to run nslookup and gene
 
 The command nslookup google.com was run in Command Prompt, triggering a DNS query that Wireshark captured over the Wi-Fi interface.
 
-![Step 4](screenshots/step5.png)
+![Step 4](step5.png)
 
 ---
 
@@ -36,7 +36,7 @@ The command nslookup google.com was run in Command Prompt, triggering a DNS quer
 
 The display filter dns was applied in Wireshark to isolate DNS traffic. Packet 1221 shows the Standard DNS query for google.com.
 
-![Step 5](screenshots/step6.png)
+![Step 5](step6.png)
 
 ---
 
@@ -44,7 +44,7 @@ The display filter dns was applied in Wireshark to isolate DNS traffic. Packet 1
 
 Packet 1222 shows the DNS response from the server containing the resolved IP addresses for google.com, matching Transaction ID 0x0004.
 
-![Step 6](screenshots/step7.png)
+![Step 6](step7.png)
 
 ---
 
@@ -52,7 +52,7 @@ Packet 1222 shows the DNS response from the server containing the resolved IP ad
 
 The DNS response packet was expanded in the details pane to reveal the Transaction ID, flags, questions, and answer records.
 
-![Step 7](screenshots/step8.png)
+![Step 7](step8.png)
 
 ---
 
@@ -70,7 +70,7 @@ The DNS Answers section in Wireshark was compared with the nslookup terminal out
 
 The display filter tcp.flags.syn == 1 was applied to isolate TCP connection initiation packets, revealing the SYN and SYN-ACK packets of the three-way handshake.
 
-![Step 9](screenshots/step12.png)
+![Step 9](step12.png)
 
 ---
 
@@ -80,7 +80,7 @@ The display filter tcp.flags.syn == 1 was applied to isolate TCP connection init
 
 The browser was navigated to zero.webappsecurity.com — an intentionally insecure HTTP training site with no encryption.
 
-![Step 10](screenshots/step13.png)
+![Step 10](step13.png)
 
 ---
 
@@ -88,7 +88,7 @@ The browser was navigated to zero.webappsecurity.com — an intentionally insecu
 
 The display filter http.request.method == POST was applied. The captured POST packet revealed the login credentials transmitted in complete plaintext — no decryption required.
 
-![Step 11](screenshots/step15.png)
+![Step 11](step15.png)
 
 ---
 
@@ -98,7 +98,7 @@ The display filter http.request.method == POST was applied. The captured POST pa
 
 The HTTP POST packet was right-clicked and Follow TCP Stream was selected to reconstruct the full HTTP conversation.
 
-![Step 12](screenshots/step16.png)
+![Step 12](step16.png)
 
 ---
 
@@ -106,7 +106,7 @@ The HTTP POST packet was right-clicked and Follow TCP Stream was selected to rec
 
 The Follow TCP Stream window displayed the complete HTTP exchange in ASCII format, including the login credentials and the server's 302 redirect response.
 
-![Step 13](screenshots/step17.png)
+![Step 13](step17.png)
 
 ---
 
@@ -114,7 +114,7 @@ The Follow TCP Stream window displayed the complete HTTP exchange in ASCII forma
 
 Three capture files were saved from this lab session as portfolio evidence.
 
-![Saved Files](screenshots/step23.png)
+![Saved Files](step23.png)
 
 | File | Size | Contents |
 |------|------|----------|
