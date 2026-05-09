@@ -74,7 +74,7 @@ The display filter tcp.flags.syn == 1 was applied to isolate TCP connection init
 
 The browser was navigated to zero.webappsecurity.com — an intentionally insecure HTTP training site. The address bar confirms the connection is unencrypted. This exercise demonstrates why HTTPS is mandatory for any site handling sensitive data — without encryption, all traffic including credentials is transmitted in plaintext and visible to anyone on the network path.
 
-![Step 10](step14.png)
+![Step 10](14.png)
 
 ---
 
